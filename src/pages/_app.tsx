@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPaw } from "@fortawesome/free-solid-svg-icons/faPaw";
 import { DEFAULT_PAGE_TITLE } from "@deps/constants/page-title";
 import Link from "next/link";
+import UnderConstructionBanner from "@deps/components/under-construction-banner/UnderConstructionBanner";
+import petStoreData from "@deps/queries/dummy-data/axolotl-store.json";
 
 const AppHead = () => (
   <Head>
@@ -26,13 +28,14 @@ const AppBody = ({ Component, pageProps }: AppProps) => {
     <>
       <header>
         <nav className="flex items-center justify-between px-6 py-4">
-          <Link href="/">
+          <Link href="/" className="flex items-center gap-2">
             <FontAwesomeIcon
               icon={faPaw}
               height={35}
               width={35}
               className="color-[#121212]"
             />
+            Pet Shop Name
           </Link>
           <ul className="flex gap-4 font-semibold">
             <li>
@@ -42,7 +45,10 @@ const AppBody = ({ Component, pageProps }: AppProps) => {
               </Link>
             </li>
             <li>
-              <Link href="/pets" className="group transition duration-300">
+              <Link
+                href="/available-pets"
+                className="group transition duration-300"
+              >
                 Available Pets
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-sky-600"></span>
               </Link>
@@ -64,6 +70,7 @@ const AppBody = ({ Component, pageProps }: AppProps) => {
 const App = (props: AppProps) => {
   return (
     <main className="h-screen text-[#121212]">
+      <UnderConstructionBanner />
       <AppHead />
       <AppBody {...props} />
     </main>

@@ -1,18 +1,16 @@
 // pages/index.tsx
-import { GetServerSideProps } from "next";
-import { getAxolotls } from "@deps/queries/api/api";
-import { Axolotl } from "@deps/models/types";
+import { Axolotl, AxolotlResponse } from "@deps/models/types";
+import petStoreData from "@deps/queries/dummy-data/axolotl-store.json";
 
-interface Props {
-  axolotls: Axolotl[];
-}
+const Home = () => {
+  // Type assertion to let TypeScript know the shape of the data
+  const data = petStoreData as AxolotlResponse;
 
-const Home = ({ axolotls }: Props) => {
   return (
     <div>
       <h1>Axolotl Store</h1>
       <ul>
-        {axolotls.map((axolotl) => (
+        {data.axolotls.map((axolotl: Axolotl) => (
           <li key={axolotl.id}>
             <strong>Name:</strong> {axolotl.name}
             <br />
@@ -29,15 +27,6 @@ const Home = ({ axolotls }: Props) => {
       </ul>
     </div>
   );
-};
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const result = await getAxolotls();
-  return {
-    props: {
-      axolotls: "axolotls" in result ? result.axolotls : [],
-    },
-  };
 };
 
 export default Home;

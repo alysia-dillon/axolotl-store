@@ -1,4 +1,3 @@
-import React from "react";
 import "@deps/styles/globals.css";
 import Head from "next/head";
 import { AppProps } from "next/app";
@@ -7,7 +6,7 @@ import { faPaw } from "@fortawesome/free-solid-svg-icons/faPaw";
 import { DEFAULT_PAGE_TITLE } from "@deps/constants/page-title";
 import Link from "next/link";
 import UnderConstructionBanner from "@deps/components/under-construction-banner/UnderConstructionBanner";
-import petStoreData from "@deps/queries/dummy-data/axolotl-store.json";
+import { PetProvider } from "@deps/contexts/petContext";
 
 const AppHead = () => (
   <Head>
@@ -54,6 +53,15 @@ const AppBody = ({ Component, pageProps }: AppProps) => {
               </Link>
             </li>
             <li>
+              <Link
+                href="/adopt-a-pet"
+                className="group transition duration-300"
+              >
+                Adopt A Pet
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-sky-600"></span>
+              </Link>
+            </li>
+            <li>
               <Link href="/contact" className="group transition duration-300">
                 Contact Us
                 <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-sky-600"></span>
@@ -72,7 +80,9 @@ const App = (props: AppProps) => {
     <main className="h-screen text-[#121212]">
       <UnderConstructionBanner />
       <AppHead />
-      <AppBody {...props} />
+      <PetProvider>
+        <AppBody {...props} />
+      </PetProvider>
     </main>
   );
 };

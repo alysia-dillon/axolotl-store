@@ -1,100 +1,98 @@
-{
-  "axolotls": [
-    {
-      "id": "1",
-      "name": "Luna",
-      "color": "White",
-      "type": "Leucistic",
-      "size_cm": 25,
-      "age_years": 2
-    },
-    {
-      "id": "2",
-      "name": "Apollo",
-      "color": "Albino",
-      "type": "Albino",
-      "size_cm": 28,
-      "age_years": 3
-    },
-    {
-      "id": "3",
-      "name": "Shadow",
-      "color": "Black",
-      "type": "Melanoid",
-      "size_cm": 30,
-      "age_years": 1
-    },
-    {
-      "id": "4",
-      "name": "Sunny",
-      "color": "Golden",
-      "type": "GFP",
-      "size_cm": 20,
-      "age_years": 4
-    },
-    {
-      "id": "5",
-      "name": "Frost",
-      "color": "Pink",
-      "type": "Wild",
-      "size_cm": 26,
-      "age_years": 5
-    },
-    {
-      "id": "6",
-      "name": "Bliss",
-      "color": "White",
-      "type": "Leucistic",
-      "size_cm": 22,
-      "age_years": 2
-    },
-    {
-      "id": "7",
-      "name": "Rusty",
-      "color": "Red",
-      "type": "Melanoid",
-      "size_cm": 27,
-      "age_years": 3
-    },
-    {
-      "id": "8",
-      "name": "Emerald",
-      "color": "Green",
-      "type": "GFP",
-      "size_cm": 24,
-      "age_years": 1
-    },
-    {
-      "id": "9",
-      "name": "Midnight",
-      "color": "Black",
-      "type": "Melanoid",
-      "size_cm": 29,
-      "age_years": 2
-    },
-    {
-      "id": "10",
-      "name": "Coral",
-      "color": "Pink",
-      "type": "Wild",
-      "size_cm": 23,
-      "age_years": 4
-    },
-    {
-      "id": "11",
-      "name": "Jade",
-      "color": "Green",
-      "type": "GFP",
-      "size_cm": 26,
-      "age_years": 2
-    },
-    {
-      "id": "12",
-      "name": "Peach",
-      "color": "Orange",
-      "type": "Albino",
-      "size_cm": 22,
-      "age_years": 3
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "name": "Luna",
+    "color": "White",
+    "type": "Leucistic",
+    "size_cm": 25,
+    "age_years": 2
+  },
+  {
+    "id": "2",
+    "name": "Apollo",
+    "color": "Albino",
+    "type": "Albino",
+    "size_cm": 28,
+    "age_years": 3
+  },
+  {
+    "id": "3",
+    "name": "Shadow",
+    "color": "Black",
+    "type": "Melanoid",
+    "size_cm": 30,
+    "age_years": 1
+  },
+  {
+    "id": "4",
+    "name": "Sunny",
+    "color": "Golden",
+    "type": "GFP",
+    "size_cm": 20,
+    "age_years": 4
+  },
+  {
+    "id": "5",
+    "name": "Frost",
+    "color": "Pink",
+    "type": "Wild",
+    "size_cm": 26,
+    "age_years": 5
+  },
+  {
+    "id": "6",
+    "name": "Bliss",
+    "color": "White",
+    "type": "Leucistic",
+    "size_cm": 22,
+    "age_years": 2
+  },
+  {
+    "id": "7",
+    "name": "Rusty",
+    "color": "Red",
+    "type": "Melanoid",
+    "size_cm": 27,
+    "age_years": 3
+  },
+  {
+    "id": "8",
+    "name": "Emerald",
+    "color": "Green",
+    "type": "GFP",
+    "size_cm": 24,
+    "age_years": 1
+  },
+  {
+    "id": "9",
+    "name": "Midnight",
+    "color": "Black",
+    "type": "Melanoid",
+    "size_cm": 29,
+    "age_years": 2
+  },
+  {
+    "id": "10",
+    "name": "Coral",
+    "color": "Pink",
+    "type": "Wild",
+    "size_cm": 23,
+    "age_years": 4
+  },
+  {
+    "id": "11",
+    "name": "Jade",
+    "color": "Green",
+    "type": "GFP",
+    "size_cm": 26,
+    "age_years": 2
+  },
+  {
+    "id": "12",
+    "name": "Peach",
+    "color": "Orange",
+    "type": "Albino",
+    "size_cm": 22,
+    "age_years": 3
+  }
+]

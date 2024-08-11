@@ -1,100 +1,98 @@
-{
-  "cats": [
-    {
-      "id": "1",
-      "name": "Whiskers",
-      "color": "Gray",
-      "breed": "Siamese",
-      "age_years": 3,
-      "weight_kg": 4.5
-    },
-    {
-      "id": "2",
-      "name": "Mittens",
-      "color": "White",
-      "breed": "Persian",
-      "age_years": 5,
-      "weight_kg": 5.2
-    },
-    {
-      "id": "3",
-      "name": "Shadow",
-      "color": "Black",
-      "breed": "Maine Coon",
-      "age_years": 4,
-      "weight_kg": 6.1
-    },
-    {
-      "id": "4",
-      "name": "Sunny",
-      "color": "Golden",
-      "breed": "Bengal",
-      "age_years": 2,
-      "weight_kg": 4.0
-    },
-    {
-      "id": "5",
-      "name": "Frost",
-      "color": "Blue",
-      "breed": "Russian Blue",
-      "age_years": 6,
-      "weight_kg": 5.0
-    },
-    {
-      "id": "6",
-      "name": "Bliss",
-      "color": "Cream",
-      "breed": "Scottish Fold",
-      "age_years": 3,
-      "weight_kg": 4.3
-    },
-    {
-      "id": "7",
-      "name": "Rusty",
-      "color": "Orange",
-      "breed": "Abyssinian",
-      "age_years": 4,
-      "weight_kg": 3.8
-    },
-    {
-      "id": "8",
-      "name": "Emerald",
-      "color": "Green",
-      "breed": "Sphynx",
-      "age_years": 2,
-      "weight_kg": 3.5
-    },
-    {
-      "id": "9",
-      "name": "Midnight",
-      "color": "Black",
-      "breed": "Bombay",
-      "age_years": 5,
-      "weight_kg": 4.7
-    },
-    {
-      "id": "10",
-      "name": "Coral",
-      "color": "Pink",
-      "breed": "Burmese",
-      "age_years": 3,
-      "weight_kg": 4.2
-    },
-    {
-      "id": "11",
-      "name": "Jade",
-      "color": "Green",
-      "breed": "Oriental Shorthair",
-      "age_years": 2,
-      "weight_kg": 3.6
-    },
-    {
-      "id": "12",
-      "name": "Peach",
-      "color": "Orange",
-      "breed": "Munchkin",
-      "age_years": 4,
-      "weight_kg": 3.9
-    }
-  ]
-}
+[
+  {
+    "id": "1",
+    "name": "Whiskers",
+    "color": "Gray",
+    "breed": "Siamese",
+    "age_years": 3,
+    "weight_kg": 4.5
+  },
+  {
+    "id": "2",
+    "name": "Mittens",
+    "color": "White",
+    "breed": "Persian",
+    "age_years": 5,
+    "weight_kg": 5.2
+  },
+  {
+    "id": "3",
+    "name": "Shadow",
+    "color": "Black",
+    "breed": "Maine Coon",
+    "age_years": 4,
+    "weight_kg": 6.1
+  },
+  {
+    "id": "4",
+    "name": "Sunny",
+    "color": "Golden",
+    "breed": "Bengal",
+    "age_years": 2,
+    "weight_kg": 4.0
+  },
+  {
+    "id": "5",
+    "name": "Frost",
+    "color": "Blue",
+    "breed": "Russian Blue",
+    "age_years": 6,
+    "weight_kg": 5.0
+  },
+  {
+    "id": "6",
+    "name": "Bliss",
+    "color": "Cream",
+    "breed": "Scottish Fold",
+    "age_years": 3,
+    "weight_kg": 4.3
+  },
+  {
+    "id": "7",
+    "name": "Rusty",
+    "color": "Orange",
+    "breed": "Abyssinian",
+    "age_years": 4,
+    "weight_kg": 3.8
+  },
+  {
+    "id": "8",
+    "name": "Emerald",
+    "color": "Green",
+    "breed": "Sphynx",
+    "age_years": 2,
+    "weight_kg": 3.5
+  },
+  {
+    "id": "9",
+    "name": "Midnight",
+    "color": "Black",
+    "breed": "Bombay",
+    "age_years": 5,
+    "weight_kg": 4.7
+  },
+  {
+    "id": "10",
+    "name": "Coral",
+    "color": "Pink",
+    "breed": "Burmese",
+    "age_years": 3,
+    "weight_kg": 4.2
+  },
+  {
+    "id": "11",
+    "name": "Jade",
+    "color": "Green",
+    "breed": "Oriental Shorthair",
+    "age_years": 2,
+    "weight_kg": 3.6
+  },
+  {
+    "id": "12",
+    "name": "Peach",
+    "color": "Orange",
+    "breed": "Munchkin",
+    "age_years": 4,
+    "weight_kg": 3.9
+  }
+]

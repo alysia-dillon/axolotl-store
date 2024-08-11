@@ -1,9 +1,8 @@
-// summary-step.tsx
-import React from "react";
 import { usePetContext } from "@deps/contexts/petContext";
 
 const SummaryStep = () => {
-  const { selectedPet, selectedPaymentMethod } = usePetContext();
+  const { selectedPet, selectedPaymentMethod, selectedPetType, goToNext } =
+    usePetContext();
   const adoptionFee = 100; // Example fixed fee
 
   if (!selectedPet || !selectedPaymentMethod) {
@@ -14,10 +13,18 @@ const SummaryStep = () => {
     <div>
       <h2>Adoption Summary</h2>
       <div>
-        <h3>Selected Pet</h3>
-        <p>Name: {selectedPet.name}</p>
-        <p>Type: {selectedPet.breed || "Unknown"}</p>
-        <p>Age: {selectedPet.age_years} years</p>
+        <p>
+          <strong>Name:</strong> {selectedPet.name}
+        </p>
+        <p>
+          <strong>Pet Type:</strong> {selectedPetType}
+        </p>
+        <p>
+          <strong>Breed:</strong> {selectedPet.breed}
+        </p>
+        <p>
+          <strong>Age:</strong> {selectedPet.age_years} years
+        </p>
       </div>
       <div>
         <h3>Adoption Fee</h3>
@@ -29,6 +36,12 @@ const SummaryStep = () => {
           {selectedPaymentMethod.type}: {selectedPaymentMethod.details}
         </p>
       </div>
+      <button
+        onClick={goToNext}
+        className="bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600"
+      >
+        Submit Adoption
+      </button>
     </div>
   );
 };

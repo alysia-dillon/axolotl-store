@@ -4,10 +4,11 @@ import SelectPetType from "@deps/containers/new-adoption-container/select-pet-ty
 import PetList from "@deps/containers/new-adoption-container/availablePets/petList";
 import StartAdoption from "@deps/containers/new-adoption-container/selected-pet/start-adoption";
 import PaymentInfo from "@deps/containers/new-adoption-container/payment/payment-step";
-import Link from "next/link";
+import Summary from "@deps/containers/new-adoption-container/summary/summary-step";
 import dogsData from "@deps/queries/dummy-data/dogs.json";
 import catsData from "@deps/queries/dummy-data/cats.json";
 import axolotlsData from "@deps/queries/dummy-data/axolotls.json";
+import Confirmation from "./confirmation/confirmation-step";
 
 const AdoptionProcess = () => {
   const {
@@ -44,8 +45,10 @@ const AdoptionProcess = () => {
         return <StartAdoption />;
       case 3:
         return <PaymentInfo />;
-      // case 4:
-      //   return <Summary />;
+      case 4:
+        return <Summary />;
+      case 5:
+        return <Confirmation />;
       // default:
       //   return <SelectPetType />;
     }
@@ -53,13 +56,9 @@ const AdoptionProcess = () => {
 
   return (
     <div>
-      {renderStep()}
-      {/* default navigation below while under construction */}
-      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
-      {currentStepIndex < (selectedPet ? 3 : 0) && (
-        <button onClick={goToNext}>Next</button>
-      )}
-      <Link href="/available-pets">Cancel Adoption</Link>
+      <section className="max-w-10 flex justify-center border-3 border-gray-500">
+        {renderStep()}
+      </section>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 // SelectPetType.tsx
 import React from "react";
 import { usePetContext } from "@deps/contexts/petContext";
+import Link from "next/link";
 
 const SelectPetType: React.FC = () => {
   const { setSelectedPetType, goToNext } = usePetContext();
@@ -53,6 +54,7 @@ const SelectPetType: React.FC = () => {
         <button type="button" onClick={goToNext}>
           Continue
         </button>
+        <Link href="/available-pets">Cancel Adoption</Link>
       </form>
     </div>
   );

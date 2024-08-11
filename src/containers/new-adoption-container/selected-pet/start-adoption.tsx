@@ -1,9 +1,9 @@
-// ConfirmAdoption.tsx
-import React from "react";
 import { usePetContext } from "@deps/contexts/petContext";
+import Link from "next/link";
 
 const ConfirmAdoption = () => {
-  const { selectedPet, goToNext } = usePetContext();
+  const { selectedPet, goToNext, goToPrevious, currentStepIndex } =
+    usePetContext();
 
   const handleConfirm = () => {
     goToNext();
@@ -35,6 +35,8 @@ const ConfirmAdoption = () => {
       <p>Fee: ${fee}</p>
       <p>Press continue to start adoption process for {selectedPet.name}</p>
       <button onClick={handleConfirm}>Continue</button>
+      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
+      <Link href="/available-pets">Cancel Adoption</Link>
     </div>
   );
 };

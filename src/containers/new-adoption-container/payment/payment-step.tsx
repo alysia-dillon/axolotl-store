@@ -1,5 +1,6 @@
 import React, { useState, ChangeEvent } from "react";
 import { usePetContext } from "@deps/contexts/petContext";
+import Link from "next/link";
 
 interface PaymentOption {
   id: string;
@@ -13,6 +14,8 @@ const PaymentStep = () => {
     paymentOptions,
     addPaymentOption,
     goToNext,
+    currentStepIndex,
+    goToPrevious,
   } = usePetContext();
 
   // State for new payment method details
@@ -137,12 +140,14 @@ const PaymentStep = () => {
         disabled={!isPaymentMethodSelected}
         className={`p-2 rounded mt-4 ${
           isPaymentMethodSelected
-            ? "bg-blue-500 text-white hover:bg-blue-600"
-            : "border-2 border-gray-500 bg-gray-300 text-gray-700 cursor-not-allowed not-allowed"
+            ? "bg-blue-500 text-white hover:bg-blue-600 cursor-pointer"
+            : "border-2 border-gray-500 bg-gray-300 text-gray-700 cursor-not-allowed"
         }`}
       >
         Continue
       </button>
+      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
+      <Link href="/available-pets">Cancel Adoption</Link>
     </div>
   );
 };

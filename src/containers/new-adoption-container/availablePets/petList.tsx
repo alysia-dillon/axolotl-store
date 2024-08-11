@@ -1,9 +1,15 @@
-import React from "react";
 import { usePetContext } from "@deps/contexts/petContext";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDog } from "@fortawesome/free-solid-svg-icons/faDog";
 import { faCat } from "@fortawesome/free-solid-svg-icons/faCat";
-import { faDragon } from "@fortawesome/free-solid-svg-icons";
+import {
+  faDove,
+  faDragon,
+  faFishFins,
+  faFrog,
+  faPaw,
+} from "@fortawesome/free-solid-svg-icons";
+import Link from "next/link";
 
 export interface Pet {
   id: string;
@@ -22,13 +28,21 @@ interface PetListProps {
 }
 
 const PetList = ({ availablePets, handleContinue }: PetListProps) => {
-  const { selectedPet, setSelectedPet, selectedPetType } = usePetContext();
+  const {
+    selectedPet,
+    setSelectedPet,
+    selectedPetType,
+    currentStepIndex,
+    goToPrevious,
+  } = usePetContext();
 
   const handleSelectPet = (pet: Pet) => {
     setSelectedPet(pet);
   };
 
   let petIcon: any;
+
+  console.log("selectedPetType", selectedPetType);
 
   switch (selectedPetType) {
     case "dog":
@@ -39,6 +53,19 @@ const PetList = ({ availablePets, handleContinue }: PetListProps) => {
       break;
     case "axolotl":
       petIcon = faDragon;
+      break;
+    case "fish":
+      petIcon = faFishFins;
+      break;
+    case "reptile":
+      petIcon = faFrog;
+      break;
+    case "bird":
+      petIcon = faDove;
+      break;
+    default:
+      petIcon = faPaw;
+      break;
   }
 
   return (
@@ -75,6 +102,8 @@ const PetList = ({ availablePets, handleContinue }: PetListProps) => {
       >
         Continue
       </button>
+      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
+      <Link href="/available-pets">Cancel Adoption</Link>
     </div>
   );
 };

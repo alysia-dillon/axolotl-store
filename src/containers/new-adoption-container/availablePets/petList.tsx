@@ -9,7 +9,6 @@ import {
   faFrog,
   faPaw,
 } from "@fortawesome/free-solid-svg-icons";
-import Link from "next/link";
 
 export interface Pet {
   id: string;
@@ -71,20 +70,20 @@ const PetList = ({ availablePets, handleContinue }: PetListProps) => {
   return (
     <div>
       <h2>Select a Pet</h2>
-      <ul>
+      <ul className="grid grid-cols-2 gap-4">
         {availablePets.map((pet) => (
           <li key={pet.id}>
             <button
               onClick={() => handleSelectPet(pet)}
-              className={`border-2 border-gray-500 p-2 rounded m-2 hover:border-orange-300 flex items-center text-left gap-4 ${
+              className={`w-fit border-2 border-ray-300 p-4 flex gap-4  ${
                 selectedPet?.id === pet.id
-                  ? "bg-orange-100 border-orange-300"
-                  : ""
+                  ? "bg-orange-100 border-orange-300 hover:bg-orange-200"
+                  : "hover:bg-orange-100"
               }`}
             >
               <FontAwesomeIcon icon={petIcon} height={35} width={35} />
               <span>
-                <p>{pet.name}</p>
+                <p className="font-semibold">{pet.name}</p>
                 <p>
                   {pet.breed || pet.type} | {pet.color}
                 </p>
@@ -96,14 +95,6 @@ const PetList = ({ availablePets, handleContinue }: PetListProps) => {
           </li>
         ))}
       </ul>
-      <button
-        onClick={handleContinue}
-        className="bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600"
-      >
-        Continue
-      </button>
-      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
-      <Link href="/available-pets">Cancel Adoption</Link>
     </div>
   );
 };

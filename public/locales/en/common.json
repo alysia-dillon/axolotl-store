@@ -1,0 +1,9 @@
+{
+  "newAdoption": {
+    "start": {
+      "title": "Start",
+      "description": "Start the adoption process",
+      "button": "Start"
+    }
+  }
+}

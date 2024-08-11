@@ -21,3 +21,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.responsive-height {
+  height: calc(100vh - 200px);
+}

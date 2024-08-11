@@ -14,7 +14,7 @@ const SelectPetType: React.FC = () => {
     <div>
       <h1>Adopt a Pet</h1>
       <h2>Select Pet Type</h2>
-      <form>
+      <form className="py-4 flex flex-col gap-1">
         <label>
           <input
             type="radio"
@@ -51,10 +51,6 @@ const SelectPetType: React.FC = () => {
           />
           Fish
         </label>
-        <button type="button" onClick={goToNext}>
-          Continue
-        </button>
-        <Link href="/available-pets">Cancel Adoption</Link>
       </form>
     </div>
   );

@@ -36,12 +36,6 @@ const SummaryStep = () => {
           {selectedPaymentMethod.type}: {selectedPaymentMethod.details}
         </p>
       </div>
-      <button
-        onClick={goToNext}
-        className="bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600"
-      >
-        Submit Adoption
-      </button>
     </div>
   );
 };

@@ -34,9 +34,6 @@ const ConfirmAdoption = () => {
       <p>Pet: {selectedPet.name}</p>
       <p>Fee: ${fee}</p>
       <p>Press continue to start adoption process for {selectedPet.name}</p>
-      <button onClick={handleConfirm}>Continue</button>
-      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
-      <Link href="/available-pets">Cancel Adoption</Link>
     </div>
   );
 };

@@ -1,6 +1,5 @@
 import React, { useState, ChangeEvent } from "react";
 import { usePetContext } from "@deps/contexts/petContext";
-import Link from "next/link";
 
 interface PaymentOption {
   id: string;
@@ -9,14 +8,8 @@ interface PaymentOption {
 }
 
 const PaymentStep = () => {
-  const {
-    setSelectedPaymentMethod,
-    paymentOptions,
-    addPaymentOption,
-    goToNext,
-    currentStepIndex,
-    goToPrevious,
-  } = usePetContext();
+  const { setSelectedPaymentMethod, paymentOptions, addPaymentOption } =
+    usePetContext();
 
   // State for new payment method details
   const [cardNumber, setCardNumber] = useState("");
@@ -48,12 +41,11 @@ const PaymentStep = () => {
     ) {
       const newOption: PaymentOption = {
         id: `new-${Date.now()}`, // Generate a unique ID
-        type: "Credit Card", // Customize as needed
+        type: "Credit Card",
         details: `Card Number: ${cardNumber}, Expiry: ${expirationMonth}/${expirationYear}, CVV: ${cvv}, Zip: ${zipCode}`,
       };
       addPaymentOption(newOption);
       setSelectedPaymentMethod(newOption);
-      // Clear fields after adding
       setCardNumber("");
       setExpirationMonth("");
       setExpirationYear("");
@@ -62,7 +54,6 @@ const PaymentStep = () => {
     }
   };
 
-  // Check if a payment method is selected
   const isPaymentMethodSelected = selectedPaymentMethodId !== null;
 
   return (
@@ -135,19 +126,6 @@ const PaymentStep = () => {
           Add Payment Method
         </button>
       </div>
-      <button
-        onClick={goToNext}
-        disabled={!isPaymentMethodSelected}
-        className={`p-2 rounded mt-4 ${
-          isPaymentMethodSelected
-            ? "bg-blue-500 text-white hover:bg-blue-600 cursor-pointer"
-            : "border-2 border-gray-500 bg-gray-300 text-gray-700 cursor-not-allowed"
-        }`}
-      >
-        Continue
-      </button>
-      {currentStepIndex > 0 && <button onClick={goToPrevious}>Back</button>}
-      <Link href="/available-pets">Cancel Adoption</Link>
     </div>
   );
 };

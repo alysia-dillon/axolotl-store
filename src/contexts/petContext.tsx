@@ -1,4 +1,3 @@
-// PetContext.tsx
 import React, { createContext, useContext, useState, ReactNode } from "react";
 
 interface Pet {
@@ -27,7 +26,7 @@ interface PetContextType {
   goToNext: () => void;
   goToPrevious: () => void;
   isAdopted: boolean;
-  paymentOptions: PaymentOption[] | string;
+  paymentOptions: PaymentOption[];
   setSelectedPaymentMethod: (paymentOption: PaymentOption) => void;
   selectedPaymentMethod: PaymentOption | null;
   addPaymentOption: (paymentOption: PaymentOption) => void;

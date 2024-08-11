@@ -12,6 +12,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@tailwindcss/forms": "^0.5.7",
     "axios": "^1.7.3",
     "clsx": "^2.1.1",
     "next": "14.2.5",

@@ -1,0 +1,112 @@
+{
+  "adoptablePets": [
+    {
+      "id": "1",
+      "name": "Max",
+      "type": "dog",
+      "breed": "Labrador Retriever",
+      "color": "Black",
+      "age_years": 4,
+      "weight_kg": 30
+    },
+    {
+      "id": "2",
+      "name": "Bella",
+      "type": "dog",
+      "breed": "Golden Retriever",
+      "color": "Golden",
+      "age_years": 3,
+      "weight_kg": 28
+    },
+    {
+      "id": "3",
+      "name": "Charlie",
+      "type": "dog",
+      "breed": "Beagle",
+      "color": "Tri-color",
+      "age_years": 2,
+      "weight_kg": 10
+    },
+    {
+      "id": "4",
+      "name": "Lucy",
+      "type": "dog",
+      "breed": "French Bulldog",
+      "color": "Brindle",
+      "age_years": 5,
+      "weight_kg": 11
+    },
+    {
+      "id": "5",
+      "name": "Daisy",
+      "type": "dog",
+      "breed": "Poodle",
+      "color": "White",
+      "age_years": 4,
+      "weight_kg": 12
+    },
+    {
+      "id": "6",
+      "name": "Cooper",
+      "type": "dog",
+      "breed": "German Shepherd",
+      "color": "Black and Tan",
+      "age_years": 6,
+      "weight_kg": 35
+    },
+    {
+      "id": "7",
+      "name": "Molly",
+      "type": "dog",
+      "breed": "Cocker Spaniel",
+      "color": "Buff",
+      "age_years": 3,
+      "weight_kg": 14
+    },
+    {
+      "id": "8",
+      "name": "Rocky",
+      "type": "dog",
+      "breed": "Boxer",
+      "color": "Fawn",
+      "age_years": 2,
+      "weight_kg": 29
+    },
+    {
+      "id": "9",
+      "name": "Sophie",
+      "type": "dog",
+      "breed": "Siberian Husky",
+      "color": "Gray and White",
+      "age_years": 4,
+      "weight_kg": 25
+    },
+    {
+      "id": "10",
+      "name": "Buddy",
+      "type": "dog",
+      "breed": "Dachshund",
+      "color": "Red",
+      "age_years": 5,
+      "weight_kg": 7
+    },
+    {
+      "id": "11",
+      "name": "Chloe",
+      "type": "dog",
+      "breed": "Shih Tzu",
+      "color": "Black and White",
+      "age_years": 6,
+      "weight_kg": 5
+    },
+    {
+      "id": "12",
+      "name": "Toby",
+      "type": "dog",
+      "breed": "Pug",
+      "color": "Fawn",
+      "age_years": 3,
+      "weight_kg": 8
+    }
+  ]
+}

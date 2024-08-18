@@ -1,6 +1,8 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface Pet {
+  age_years?: string;
+  weight_kg?: string;
   id: string;
   name: string;
   type: string;

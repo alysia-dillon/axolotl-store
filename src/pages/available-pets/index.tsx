@@ -1,29 +1,12 @@
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState, AppDispatch } from "../../../store";
-import { setPets } from "../../../store/petSlice";
+// src/pages/available-pets/index.tsx
+// import { useEffect } from "react";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
+// import { setPets } from "../../../store/petSlice";
+import Link from "next/link";
 
 const AvailablePets = () => {
-  const dispatch = useDispatch<AppDispatch>();
   const pets = useSelector((state: RootState) => state.pets.pets);
-
-  useEffect(() => {
-    const fetchPets = async () => {
-      try {
-        const response = await fetch("/pets.json"); // Fetch from the public folder
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const data = await response.json();
-        // Assuming data.adoptablePets is the array you want to use
-        dispatch(setPets(data.adoptablePets));
-      } catch (error) {
-        console.error("Failed to fetch pets:", error);
-      }
-    };
-
-    fetchPets();
-  }, [dispatch]);
 
   if (pets.length === 0) {
     return <div>Loading pets...</div>;
@@ -40,7 +23,9 @@ const AvailablePets = () => {
           <p>Age: {pet.age_years} years</p>
           <p>Weight: {pet.weight_kg} kg</p>
           <p>Adopted: {pet.adopted ? "Yes" : "No"}</p>
-          <a href={`/available-pets/${pet.id}`}>View Details</a>
+          <Link href={`/available-pets/${pet.id}`}>
+            View Details
+          </Link>
         </div>
       ))}
     </div>

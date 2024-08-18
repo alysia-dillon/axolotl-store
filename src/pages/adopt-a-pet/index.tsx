@@ -12,26 +12,7 @@ const AdoptionProcess: React.FC = () => {
 
   useEffect(() => {
     // Simulate fetching pets data
-    const fetchedPets = [
-      {
-        id: "1",
-        name: "Max",
-        type: "dog",
-        breed: "Labrador",
-        age: 4,
-        color: "black",
-        adopted: false,
-      },
-      {
-        id: "2",
-        name: "Bella",
-        type: "cat",
-        breed: "Persian",
-        age: 3,
-        color: "white",
-        adopted: false,
-      },
-    ];
+    const fetchedPets = pets;
     dispatch(setPets(fetchedPets));
   }, [dispatch]);
 
@@ -70,6 +51,7 @@ const AdoptionProcess: React.FC = () => {
           <h1>Select a Pet</h1>
           {pets
             .filter((pet) => pet.type === selectedPetType)
+            .filter(pet => !pet.adopted)
             .map((pet) => (
               <div key={pet.id}>
                 <h2>{pet.name}</h2>

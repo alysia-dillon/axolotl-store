@@ -1,7 +1,22 @@
+import { useSelector } from "react-redux";
+import { RootState } from "../../../store";
+import Link from "next/link";
+
 export default function AvailablePets() {
+  const pets = useSelector((state: RootState) => state.pets.pets);
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <div>
       <h1>Available Pets</h1>
-    </main>
+      {pets.map((pet) => (
+        <div key={pet.id}>
+          <h2>{pet.name}</h2>
+          <p>Type: {pet.type}</p>
+          <p>Breed: {pet.breed}</p>
+          <p>Adopted: {pet.adopted ? "Yes" : "No"}</p>
+          <Link href={`/pets/${pet.id}`}>View Details</Link>
+        </div>
+      ))}
+    </div>
   );
 }

@@ -1,7 +1,8 @@
 export default function About() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>About</h1>
-    </main>
+    <div>
+      <h1>About Us</h1>
+      <p>We are a pet store dedicated to finding loving homes for pets.</p>
+    </div>
   );
 }

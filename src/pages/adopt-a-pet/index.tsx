@@ -10,18 +10,6 @@ const AdoptionProcess: React.FC = () => {
   const [step, setStep] = useState<number>(0);
   const [selectedPetType, setSelectedPetType] = useState<string>("");
 
-  // useEffect(() => {
-  //   // Fetch data if not already in state (optional)
-  //   if (pets.length === 0) {
-  //     fetch('/pets.json') // Adjust the path if necessary
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         dispatch(setPets(data.adoptablePets)); // Ensure this matches the JSON structure
-  //       })
-  //       .catch(error => console.error('Error fetching pets:', error));
-  //   }
-  // }, [dispatch, pets.length]);
-
   const handlePetTypeChange = (type: string) => {
     setSelectedPetType(type);
     setStep(1);

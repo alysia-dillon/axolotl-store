@@ -1,7 +1,7 @@
 import React from "react";
 import { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import { store } from "../../store";
+import { store, persistor } from "../../store";
 import "@deps/styles/globals.css";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,6 +9,7 @@ import { faPaw } from "@fortawesome/free-solid-svg-icons/faPaw";
 import { DEFAULT_PAGE_TITLE } from "@deps/constants/formats";
 import Link from "next/link";
 import UnderConstructionBanner from "@deps/components/under-construction-banner/UnderConstructionBanner";
+import { PersistGate } from 'redux-persist/integration/react';
 
 const AppHead = () => (
   <Head>
@@ -73,6 +74,7 @@ const AppBody = ({ Component, pageProps }: AppProps) => {
 
 const App = (props: AppProps) => {
   return (
+    <PersistGate loading={null} persistor={persistor}>
     <main className="h-screen text-[#121212]">
       <UnderConstructionBanner />
       <AppHead />
@@ -80,6 +82,7 @@ const App = (props: AppProps) => {
         <AppBody {...props} />
       </Provider>
     </main>
+    </PersistGate>
   );
 };
 

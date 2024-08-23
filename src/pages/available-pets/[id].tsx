@@ -2,15 +2,15 @@
 import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../store";
+import Image from "next/image";
 
 const PetDetail = () => {
   const router = useRouter();
   const { id } = router.query;
   const pets = useSelector((state: RootState) => state.pets.pets);
 
-  console.log("Current pets in state:", pets); // Log the state pets
-  console.log("Pet ID from query:", id); // Log the ID from the query
-
+  console.log('pets: ', pets)
+  
   const pet = pets.find((pet) => pet.id === (id as string));
 
   if (!pet) {
@@ -19,6 +19,7 @@ const PetDetail = () => {
 
   return (
     <div>
+      
       <h1>{pet.name}</h1>
       <p>Breed: {pet.breed}</p>
       <p>Age: {pet.age_years} years</p>

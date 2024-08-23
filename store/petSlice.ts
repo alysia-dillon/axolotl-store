@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface Pet {
+export interface Pet {
   age_years?: string;
   weight_kg?: string;
   id: string;
@@ -10,6 +10,7 @@ interface Pet {
   age: number;
   color: string;
   adopted: boolean;
+  image_url?: string;
 }
 
 interface PetState {

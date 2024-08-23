@@ -7,7 +7,8 @@
       "breed": "Labrador Retriever",
       "color": "Black",
       "age_years": 4,
-      "weight_kg": 30
+      "weight_kg": 30,
+      "image_url": "https://images.unsplash.com/photo-1669364963719-ec2d3a998a22?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "breed": "Golden Retriever",
       "color": "Golden",
       "age_years": 3,
-      "weight_kg": 28
+      "weight_kg": 28,
+      "image_url": ""
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "breed": "Beagle",
       "color": "Tri-color",
       "age_years": 2,
-      "weight_kg": 10
+      "weight_kg": 10,
+      "image_url": ""
     },
     {
       "id": "4",
@@ -34,7 +37,8 @@
       "breed": "French Bulldog",
       "color": "Brindle",
       "age_years": 5,
-      "weight_kg": 11
+      "weight_kg": 11,
+      "image_url": ""
     },
     {
       "id": "5",
@@ -43,7 +47,8 @@
       "breed": "Poodle",
       "color": "White",
       "age_years": 4,
-      "weight_kg": 12
+      "weight_kg": 12,
+      "image_url": ""
     },
     {
       "id": "6",
@@ -52,7 +57,8 @@
       "breed": "German Shepherd",
       "color": "Black and Tan",
       "age_years": 6,
-      "weight_kg": 35
+      "weight_kg": 35,
+      "image_url": ""
     },
     {
       "id": "7",
@@ -61,7 +67,8 @@
       "breed": "Cocker Spaniel",
       "color": "Buff",
       "age_years": 3,
-      "weight_kg": 14
+      "weight_kg": 14,
+      "image_url": ""
     },
     {
       "id": "8",
@@ -70,7 +77,8 @@
       "breed": "Boxer",
       "color": "Fawn",
       "age_years": 2,
-      "weight_kg": 29
+      "weight_kg": 29,
+      "image_url": ""
     },
     {
       "id": "9",
@@ -79,7 +87,8 @@
       "breed": "Siberian Husky",
       "color": "Gray and White",
       "age_years": 4,
-      "weight_kg": 25
+      "weight_kg": 25,
+      "image_url": ""
     },
     {
       "id": "10",
@@ -88,7 +97,8 @@
       "breed": "Dachshund",
       "color": "Red",
       "age_years": 5,
-      "weight_kg": 7
+      "weight_kg": 7,
+      "image_url": ""
     },
     {
       "id": "11",
@@ -97,7 +107,8 @@
       "breed": "Shih Tzu",
       "color": "Black and White",
       "age_years": 6,
-      "weight_kg": 5
+      "weight_kg": 5,
+      "image_url": ""
     },
     {
       "id": "12",
@@ -106,7 +117,8 @@
       "breed": "Pug",
       "color": "Fawn",
       "age_years": 3,
-      "weight_kg": 8
+      "weight_kg": 8,
+      "image_url": ""
     }
   ]
 }

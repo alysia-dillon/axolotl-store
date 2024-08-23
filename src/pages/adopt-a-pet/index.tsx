@@ -10,11 +10,17 @@ const AdoptionProcess: React.FC = () => {
   const [step, setStep] = useState<number>(0);
   const [selectedPetType, setSelectedPetType] = useState<string>("");
 
-  useEffect(() => {
-    // Simulate fetching pets data
-    const fetchedPets = pets;
-    dispatch(setPets(fetchedPets));
-  }, [dispatch]);
+  // useEffect(() => {
+  //   // Fetch data if not already in state (optional)
+  //   if (pets.length === 0) {
+  //     fetch('/pets.json') // Adjust the path if necessary
+  //       .then(response => response.json())
+  //       .then(data => {
+  //         dispatch(setPets(data.adoptablePets)); // Ensure this matches the JSON structure
+  //       })
+  //       .catch(error => console.error('Error fetching pets:', error));
+  //   }
+  // }, [dispatch, pets.length]);
 
   const handlePetTypeChange = (type: string) => {
     setSelectedPetType(type);
@@ -22,7 +28,7 @@ const AdoptionProcess: React.FC = () => {
   };
 
   const handlePetSelect = (petId: string) => {
-    const pet = pets.find((pet) => pet.id === petId);
+    const pet = pets.find(pet => pet.id === petId);
     if (pet) {
       dispatch(selectPet(pet));
       setStep(2);
@@ -50,9 +56,8 @@ const AdoptionProcess: React.FC = () => {
         <div>
           <h1>Select a Pet</h1>
           {pets
-            .filter((pet) => pet.type === selectedPetType)
-            .filter(pet => !pet.adopted)
-            .map((pet) => (
+            .filter(pet => pet.type === selectedPetType && !pet.adopted) // Only show non-adopted pets
+            .map(pet => (
               <div key={pet.id}>
                 <h2>{pet.name}</h2>
                 <button onClick={() => handlePetSelect(pet.id)}>Select</button>
